@@ -6,6 +6,7 @@ Revision history for Perl module GraphViz.
 	 - Add ability to set ORIENTATION.
 	 - Add Changelog.ini.
 	 - Add META.json, MYMETA.json and MYMETA.yml.
+	 - Add MANIFEST.SKIP.
 	 - Ensure all modules contain a version number.
 	 - Update the docs regarding the list of modules shipped in this distro.
 	 - Remove examples/remote.pl because GraphViz::Remote is no longer shipped.
