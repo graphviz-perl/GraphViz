@@ -212,12 +212,15 @@ page then the resulting PostScript image is a sequence of pages that
 can be tiled or assembled into a mosaic of the full image. (This only
 works for PostScript output).
 
-
 =item concentrate
 
 The 'concentrate' attribute controls enables an edge merging technique
 to reduce clutter in dense layouts of directed graphs. The default is
 not to merge edges.
+
+=item orientation
+
+This option controls the angle, in degrees, used to rotate polygon node shapes.
 
 =item random_start
 
