@@ -3,7 +3,7 @@ Revision history for Perl module GraphViz.
 2.05 Thu Oct 20 10:52:00 2011
 	 - Add 'Deprecated. See GraphViz2' to the docs.
 	 - Add Build.PL.
-	 - Add ability to set ORIENTATION.
+	 - Add ability to set ORIENTATION. Thanx to Christian Lackas for the patch. See RT#71787.
 	 - Add Changelog.ini.
 	 - Add META.json, MYMETA.json and MYMETA.yml.
 	 - Add MANIFEST.SKIP.
