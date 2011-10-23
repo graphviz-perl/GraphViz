@@ -1,15 +1,63 @@
---- #YAML:1.0
-name:                GraphViz
-version:             2.04
-abstract:            Interface to the GraphViz graphing tool
-license:             perl
-author:              
-    - Leon Brocard <acme@astray.com>
-generated_by:        ExtUtils::MakeMaker version 6.44
-distribution_type:   module
-requires:     
-    IPC::Run:                      0.6
-    Test::More:                    0
+---
+abstract: 'Interface to the GraphViz graphing tool'
+author:
+  - 'Leon Brocard <acme@astray.com>'
+build_requires:
+  Test::More: 0.94
+  Test::Pod: 1.44
+configure_requires:
+  Module::Build: 0.38
+dynamic_config: 1
+generated_by: 'Module::Build version 0.38, CPAN::Meta::Converter version 2.110930'
+license: perl
 meta-spec:
-    url:     http://module-build.sourceforge.net/META-spec-v1.3.html
-    version: 1.3
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: GraphViz
+provides:
+  Devel::GraphVizProf:
+    file: lib/Devel/GraphVizProf.pm
+    version: 2.05
+  GraphViz:
+    file: lib/GraphViz.pm
+    version: 2.05
+  GraphViz::Data::Grapher:
+    file: lib/GraphViz/Data/Grapher.pm
+    version: 2.05
+  GraphViz::No:
+    file: lib/GraphViz/No.pm
+    version: 2.05
+  GraphViz::Parse::RecDescent:
+    file: lib/GraphViz/Parse/RecDescent.pm
+    version: 2.05
+  GraphViz::Parse::Yacc:
+    file: lib/GraphViz/Parse/Yacc.pm
+    version: 2.05
+  GraphViz::Parse::Yapp:
+    file: lib/GraphViz/Parse/Yapp.pm
+    version: 2.05
+  GraphViz::Regex:
+    file: lib/GraphViz/Regex.pm
+    version: 2.05
+  GraphViz::Small:
+    file: lib/GraphViz/Small.pm
+    version: 2.05
+  GraphViz::XML:
+    file: lib/GraphViz/XML.pm
+    version: 2.05
+requires:
+  Carp: 1.17
+  Config: 0
+  Getopt::Long: 2.38
+  IO::Dir: 1.07
+  IO::File: 1.14
+  IPC::Run: 0.6
+  LWP::Simple: 6
+  Parse::RecDescent: 1.965001
+  Pod::Usage: 1.36
+  Time::HiRes: 1.9724
+  XML::Twig: 3.38
+  XML::XPath: 1.13
+resources:
+  license: http://dev.perl.org/licenses/
+version: 2.05

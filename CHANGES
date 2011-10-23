@@ -2,11 +2,15 @@ Revision history for Perl module GraphViz.
 
 2.05 Thu Oct 20 10:52:00 2011
 	 - Add 'Deprecated. See GraphViz2' to the docs.
+	 - Add Build.PL.
 	 - Add ability to set ORIENTATION.
-	 - Ensure all modules contain a version number.
-	 - Clean up Makefile.PL.
 	 - Add Changelog.ini.
+	 - Add META.json, MYMETA.json and MYMETA.yml.
+	 - Ensure all modules contain a version number.
 	 - Update the docs regarding the list of modules shipped in this distro.
+	 - Remove examples/remote.pl because GraphViz::Remote is no longer shipped.
+	 - Clean up examples/clusters2.pl.
+	 - Clean up Makefile.PL.
 
 2.04 Fri Dec 12 21:31:24 GMT 2008
     - perltidy everything

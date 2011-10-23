@@ -1,10 +1,8 @@
 package Devel::GraphVizProf; # To help the CPAN indexer to identify us
 
-$Devel::GraphVizProf::VERSION = '2.05';
+our $VERSION = '2.05';
 
 package DB;
-
-require 5.000;
 
 use Time::HiRes 'time';
 

@@ -1,24 +1,28 @@
-#!perl
-
-use warnings;
-
-use Config;
-use ExtUtils::MakeMaker;
 use File::Which; # For which().
+
+use Module::Build;
 
 if (! which('dot') )
 {
 	die "Did not find 'dot'. Please install graphviz from http://www.graphviz.org/";
 }
 
-WriteMakefile
+Module::Build -> new
 (
- NAME         => 'GraphViz',
- VERSION_FROM => 'lib/GraphViz.pm',
- LICENSE      => 'perl',
- AUTHOR       => 'Leon Brocard <acme@astray.com>',
- ABSTRACT     => 'Interface to the GraphViz graphing tool',
- PREREQ_PM    =>
+ module_name    => 'GraphViz',
+ license        => 'perl',
+ dist_abstract  => 'Interface to the GraphViz graphing tool',
+ dist_author    => 'Leon Brocard <acme@astray.com>',
+ build_requires =>
+ {
+ 	 Test::More => 0.94,
+ 	 Test::Pod  => 1.44,
+ },
+ configure_requires =>
+ {
+ 	 Module::Build => 0.3800,
+ },
+ requires =>
  {
 	 Carp              => 1.17,
 	 Config            => undef,
@@ -30,17 +34,10 @@ WriteMakefile
 	 Parse::RecDescent => 1.965001,
 	 Pod::Usage        => 1.36,
 	 strict            => 1.04,
- 	 Test::More        => 0.94,
- 	 Test::Pod         => 1.44,
 	 Time::HiRes       => 1.9724,
 	 vars              => 1.01,
 	 warnings          => 1.09,
 	 XML::Twig         => 3.38,
 	 XML::XPath        => 1.13,
  },
- dist =>
- {
-	 COMPRESS => 'gzip -9f',
-	 SUFFIX => 'gz',
- },
-);
+) -> create_build_script();

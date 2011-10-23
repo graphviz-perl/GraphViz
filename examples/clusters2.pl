@@ -1,6 +1,7 @@
-# perl -w
+#!perl -w
 
-use strict;                                                                                                                                    use lib '.';
+use strict;
+use lib '.';
 use GraphViz;
 
 my $g = GraphViz->new();

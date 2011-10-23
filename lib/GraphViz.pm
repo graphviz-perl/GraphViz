@@ -12,7 +12,7 @@ our $VERSION = '2.05';
 
 =head1 NAME
 
-GraphViz - Interface to the GraphViz graphing tool. Deprecated. See GraphViz2
+GraphViz - Interface to AT&T's GraphViz. Deprecated. See GraphViz2
 
 =head1 SYNOPSIS
 
