@@ -1,9 +1,12 @@
 Revision history for Perl module GraphViz.
 
 2.05 Thu Oct 20 10:52:00 2011
-	 - Add 'Deprecated. See GraphViz2' to the module's NAME.
+	 - Add 'Deprecated. See GraphViz2' to the docs.
 	 - Add ability to set ORIENTATION.
 	 - Ensure all modules contain a version number.
+	 - Clean up Makefile.PL.
+	 - Add Changelog.ini.
+	 - Update the docs regarding the list of modules shipped in this distro.
 
 2.04 Fri Dec 12 21:31:24 GMT 2008
     - perltidy everything

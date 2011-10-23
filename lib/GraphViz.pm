@@ -38,6 +38,32 @@ and undirected graphs in a variety of formats (PostScript, PNG, etc.) using the
 "dot", "neato", "twopi", "circo" and "fdp"  programs from the GraphViz project
 (http://www.graphviz.org/ or http://www.research.att.com/sw/tools/graphviz/).
 
+GraphViz is deprecated in favour of L<GraphViz2>.
+
+=head2 Modules in this distro
+
+=over 4
+
+=item o GraphViz
+
+=item o GraphViz::No
+
+=item o GraphViz::Small
+
+=item o GraphViz::Regex
+
+=item o GraphViz::XML
+
+=item o GraphViz::Data::Grapher
+
+=item o GraphViz::Parse::RecDescent
+
+=item o GraphViz::Parse::Yacc
+
+=item o GraphViz::Parse::Yapp
+
+=back
+
 =head2 What is a graph?
 
 A (undirected) graph is a collection of nodes linked together with
@@ -1269,12 +1295,18 @@ syntax, please.
 
 =head1 SEE ALSO
 
-GraphViz::XML, GraphViz::Regex
+GraphViz is deprecated in favour of L<GraphViz2>.
+
+=head1 Machine-Readable Change Log
+
+The file CHANGES was converted into Changelog.ini by L<Module::Metadata::Changes>.
 
 =head1 AUTHOR
 
-Leon Brocard E<lt>F<acme@astray.com>E<gt>
+Leon Brocard: E<lt>F<acme@astray.com>E<gt>.
 
+Current maintainer: Ron Savage I<E<lt>ron@savage.net.auE<gt>>.
+ 
 =head1 COPYRIGHT
 
 Copyright (C) 2000-4, Leon Brocard

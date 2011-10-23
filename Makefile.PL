@@ -34,10 +34,10 @@ WriteMakefile(
 
 sub find {
     my $binary   = shift;
-    my $path     = join ', ', @ENV{PATH};
+    my $path     = join ', ', $ENV{PATH};
     my $path_sep = $Config{path_sep};
     my $exe_ext  = $Config{exe_ext};
-    foreach my $dir ( split $path_sep, @ENV{PATH} ) {
+    foreach my $dir ( split $path_sep, $ENV{PATH} ) {
         my $filename = catfile( $dir, $binary );
         return $filename if -x "$filename$exe_ext";
     }
