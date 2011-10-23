@@ -38,7 +38,10 @@
             "Pod::Usage" : "1.36",
             "Time::HiRes" : "1.9724",
             "XML::Twig" : "3.38",
-            "XML::XPath" : "1.13"
+            "XML::XPath" : "1.13",
+            "strict" : "1.04",
+            "vars" : "1.01",
+            "warnings" : "1.09"
          }
       }
    },
