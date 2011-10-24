@@ -1,5 +1,8 @@
 Revision history for Perl module GraphViz.
 
+2.06 Tue Oct 25 08:09:00 2011
+	 - Add File::Which to the pre-reqs in Build.PL and Makefile.PL.
+
 2.05 Thu Oct 20 10:52:00 2011
 	 - Add 'Deprecated. See GraphViz2' to the docs.
 	 - Add Build.PL.

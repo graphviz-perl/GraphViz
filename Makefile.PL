@@ -1,9 +1,9 @@
-#!perl
-
 use warnings;
 
 use Config;
+
 use ExtUtils::MakeMaker;
+
 use File::Which; # For which().
 
 if (! which('dot') )
@@ -22,6 +22,7 @@ WriteMakefile
  {
 	 Carp              => 1.17,
 	 Config            => undef,
+	 File::Which       => 1.09,
 	 Getopt::Long      => 2.38,
 	 IO::Dir           => 1.07,
 	 IO::File          => 1.14,
