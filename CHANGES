@@ -1,5 +1,10 @@
 Revision history for Perl module GraphViz.
 
+2.07 Sun Oct 30 16:08:00 2011
+	 - Rewrite Build.PL and Makefile.PL to try loading File::Which rather than assuming it is installed.
+	   This avoids the chicken-and-egg problem whereby these 2 programs need File::Which::which to find 'dot'.
+	   Many thanx to Richard Clamp for the error report: https://rt.cpan.org/Public/Bug/Display.html?id=71971.
+
 2.06 Tue Oct 25 08:09:00 2011
 	 - Add File::Which to the pre-reqs in Build.PL and Makefile.PL.
 

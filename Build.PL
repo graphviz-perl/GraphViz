@@ -1,10 +1,15 @@
-use File::Which; # For which().
-
 use Module::Build;
 
-if (! which('dot') )
+eval "require File::Which";
+
+if ($@)
 {
-	die "Did not find 'dot'. Please install graphviz from http://www.graphviz.org/";
+	die "Error: GraphViz requires File::Which to run Build.PL and Makefile.PL. \n";
+}
+
+if (! File::Which::which('dot') )
+{
+	die "Error: Did not find 'dot'. Please install graphviz from http://www.graphviz.org/";
 }
 
 Module::Build -> new

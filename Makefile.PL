@@ -4,11 +4,16 @@ use Config;
 
 use ExtUtils::MakeMaker;
 
-use File::Which; # For which().
+eval "require File::Which";
 
-if (! which('dot') )
+if ($@)
 {
-	die "Did not find 'dot'. Please install graphviz from http://www.graphviz.org/";
+	die "Error: GraphViz requires File::Which to run Build.PL and Makefile.PL. \n";
+}
+
+if (! File::Which::which('dot') )
+{
+	die "Error: Did not find 'dot'. Please install graphviz from http://www.graphviz.org/";
 }
 
 WriteMakefile
