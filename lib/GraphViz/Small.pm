@@ -7,7 +7,7 @@ use vars qw($VERSION @ISA);
 
 @ISA = qw(GraphViz);
 
-our $VERSION = '2.07';
+our $VERSION = '2.08';
 
 =head1 NAME
 

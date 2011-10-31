@@ -8,7 +8,7 @@ use Carp;
 use Config;
 use IPC::Run qw(run binary);
 
-our $VERSION = '2.07';
+our $VERSION = '2.08';
 
 =head1 NAME
 

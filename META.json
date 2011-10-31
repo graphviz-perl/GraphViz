@@ -16,7 +16,7 @@
    "prereqs" : {
       "build" : {
          "requires" : {
-            "Test::More" : "0.94",
+            "Test::More" : "0.47",
             "Test::Pod" : "1.44"
          }
       },
@@ -27,65 +27,65 @@
       },
       "runtime" : {
          "requires" : {
-            "Carp" : "1.17",
+            "Carp" : "1.01",
             "Config" : 0,
             "File::Which" : "1.09",
-            "Getopt::Long" : "2.38",
-            "IO::Dir" : "1.07",
-            "IO::File" : "1.14",
+            "Getopt::Long" : "2.34",
+            "IO::Dir" : "1.04",
+            "IO::File" : "1.1",
             "IPC::Run" : "0.6",
             "LWP::Simple" : "6",
             "Parse::RecDescent" : "1.965001",
-            "Pod::Usage" : "1.36",
-            "Time::HiRes" : "1.9724",
+            "Pod::Usage" : "1.16",
+            "Time::HiRes" : "1.51",
             "XML::Twig" : "3.38",
             "XML::XPath" : "1.13",
-            "strict" : "1.04",
+            "strict" : "1.03",
             "vars" : "1.01",
-            "warnings" : "1.09"
+            "warnings" : "1.03"
          }
       }
    },
    "provides" : {
       "Devel::GraphVizProf" : {
          "file" : "lib/Devel/GraphVizProf.pm",
-         "version" : "2.07"
+         "version" : "2.08"
       },
       "GraphViz" : {
          "file" : "lib/GraphViz.pm",
-         "version" : "2.07"
+         "version" : "2.08"
       },
       "GraphViz::Data::Grapher" : {
          "file" : "lib/GraphViz/Data/Grapher.pm",
-         "version" : "2.07"
+         "version" : "2.08"
       },
       "GraphViz::No" : {
          "file" : "lib/GraphViz/No.pm",
-         "version" : "2.07"
+         "version" : "2.08"
       },
       "GraphViz::Parse::RecDescent" : {
          "file" : "lib/GraphViz/Parse/RecDescent.pm",
-         "version" : "2.07"
+         "version" : "2.08"
       },
       "GraphViz::Parse::Yacc" : {
          "file" : "lib/GraphViz/Parse/Yacc.pm",
-         "version" : "2.07"
+         "version" : "2.08"
       },
       "GraphViz::Parse::Yapp" : {
          "file" : "lib/GraphViz/Parse/Yapp.pm",
-         "version" : "2.07"
+         "version" : "2.08"
       },
       "GraphViz::Regex" : {
          "file" : "lib/GraphViz/Regex.pm",
-         "version" : "2.07"
+         "version" : "2.08"
       },
       "GraphViz::Small" : {
          "file" : "lib/GraphViz/Small.pm",
-         "version" : "2.07"
+         "version" : "2.08"
       },
       "GraphViz::XML" : {
          "file" : "lib/GraphViz/XML.pm",
-         "version" : "2.07"
+         "version" : "2.08"
       }
    },
    "release_status" : "stable",
@@ -94,5 +94,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "2.07"
+   "version" : "2.08"
 }

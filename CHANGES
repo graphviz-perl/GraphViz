@@ -1,5 +1,9 @@
 Revision history for Perl module GraphViz.
 
+2.08 Tue Nov  1 10:55:00 2011
+	 - Wind back pre-reqs for various modules to match what was shipped with Perl V 5.8.1.
+	   Many thanx to Brian Cassidy for the error report: https://rt.cpan.org/Ticket/Display.html?id=72068.
+
 2.07 Sun Oct 30 16:08:00 2011
 	 - Rewrite Build.PL and Makefile.PL to try loading File::Which rather than assuming it is installed.
 	   This avoids the chicken-and-egg problem whereby these 2 programs need File::Which::which to find 'dot'.
