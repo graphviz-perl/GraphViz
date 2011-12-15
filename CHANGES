@@ -1,5 +1,10 @@
 Revision history for Perl module GraphViz.
 
+2.09  Thu Dec 15 11:08:00 2011
+	  - Adopt Flavio Poletti's suggestion of trying to pipe to dot, in Build.PL/Makefile.PL, rather than using File::Which,
+	  	to see if dot (Graphviz) is installed. This (hopefully) solves the problem of using File::Which on systems where it is
+		not installed, before Build.PL/Makefile.PL has a chance to tell the user that File::Which is required. See: RT#73077.
+
 2.08 Tue Nov  1 10:55:00 2011
 	 - Wind back pre-reqs for various modules to match what was shipped with Perl V 5.8.1.
 	   Many thanx to Brian Cassidy for the error report: https://rt.cpan.org/Ticket/Display.html?id=72068.
