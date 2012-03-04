@@ -13,7 +13,7 @@ Module::Build -> new
 (
  module_name    => 'GraphViz',
  license        => 'perl',
- dist_abstract  => 'Interface to the GraphViz graphing tool',
+ dist_abstract  => "Interface to AT&T's GraphViz. Deprecated. See GraphViz2",
  dist_author    => 'Leon Brocard <acme@astray.com>',
  build_requires =>
  {

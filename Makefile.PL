@@ -17,7 +17,7 @@ WriteMakefile
  VERSION_FROM => 'lib/GraphViz.pm',
  LICENSE      => 'perl',
  AUTHOR       => 'Leon Brocard <acme@astray.com>',
- ABSTRACT     => 'Interface to the GraphViz graphing tool',
+ ABSTRACT     => "Interface to AT&T's GraphViz. Deprecated. See GraphViz2",
  PREREQ_PM    =>
  {
 	 Carp              => 1.01,
