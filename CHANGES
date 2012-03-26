@@ -1,5 +1,14 @@
 Revision history for Perl module GraphViz.
 
+2.10  Mon Mar 26 10:11:00 2012
+	- Accept a patch kindly supplied by Alexander Kriegisch, to change handling of the rankdir attribute.
+		The valid values are BT, LR, RL or TB, or their lower-case equivalents.
+		Previously, only a true value was accepted, which meant LR. Now, any value not in that list defaults to LR.
+		Files changed: README, CHANGES, Changelog.ini, GraphViz.pm, GraphViz/Regex.pm and simple.t.
+	- Patch this file to replace BST with GMT, since both DateTime::Format::HTTP and DateTime::Format::Strptime
+		fail to recognize BST.
+		These modules are used by Module::Metadata::Changes to transform this file into Changelog.ini.
+
 2.09  Thu Dec 15 11:08:00 2011
 	  - Adopt Flavio Poletti's suggestion of trying to pipe to dot, in Build.PL/Makefile.PL, rather than using File::Which,
 	  	to see if dot (Graphviz) is installed. This (hopefully) solves the problem of using File::Which on systems where it is
@@ -45,15 +54,15 @@ Revision history for Perl module GraphViz.
 	  to the dot language (by Max Baker)
 	- new test which tests the POD
 
-2.01 Fri Sep 24 17:02:29 BST 2004
-        - no longer *always* quote the label in add_node() in order to 
+2.01 Fri Sep 24 17:02:29 GMT 2004
+        - no longer *always* quote the label in add_node() in order to
           let GraphViz::Data::Structure work again (sorry)
 
-2.00 Wed Aug 25 16:30:53 BST 2004
+2.00 Wed Aug 25 16:30:53 GMT 2004
         - thanks to Ron Savage, patched to work under systems
           which have an executable extension, such as Windows
 
-1.9 Tue Aug 24 15:30:31 BST 2004
+1.9 Tue Aug 24 15:30:31 GMT 2004
 	- check for "dot" in the Makefile.PL instead of a test, as
 	  suggested by Autrijus Tang
 	- renamed Changes to CHANGES
@@ -86,7 +95,7 @@ Revision history for Perl module GraphViz.
 	  work under Win32!
 	- this is the Flight 63 edition
 
-1.4 Wed Oct  3 07:57:42 BST 2001
+1.4 Wed Oct  3 07:57:42 GMT 2001
 	- added new filehandle, scalar reference, and code reference
 	  scheme to as_* to allow streaming of data, rather than
 	  accumulating potentially very large output in memory (based
@@ -94,7 +103,7 @@ Revision history for Perl module GraphViz.
 	- new pagewidth and pageheight graph attributes for creating
 	  PostScript mosaics of large graphs (idea by Nelson Loyola)
 
-1.3 Sun Aug 19 15:43:02 BST 2001
+1.3 Sun Aug 19 15:43:02 GMT 2001
 	- labels can now contain quotes
 	- fixed bug: labels can now start with a number
 	- fixed bug in Devel::GraphVizProf so that packages
@@ -107,12 +116,12 @@ Revision history for Perl module GraphViz.
 	- make empty cluster names do nothing (patch by Barrie
 	  Slaymaker)
 
-1.2 Fri Aug 10 18:54:21 BST 2001
+1.2 Fri Aug 10 18:54:21 GMT 2001
         - removed the images in the examples directory and added
           a file (make_all.pl) to, errr, make all the images
 	- This is the HAL2001 edition
 
-1.1 Tue Jul 24 23:54:42 BST 2001
+1.1 Tue Jul 24 23:54:42 GMT 2001
 	- added extra parameter to as_* to allow easy saving of
 	  images: $graph->as_png("pretty.png")
 	- added new GraphViz::Parse::Yapp module to visualise
@@ -121,7 +130,7 @@ Revision history for Perl module GraphViz.
 	  Parse::Yacc grammars
 	- This is the TPC5 edition
 
-1.00 Thu Jun 14 15:10:28 BST 2001
+1.00 Thu Jun 14 15:10:28 GMT 2001
 	- finally released as version 1.00!
 	- added a reference to brian d foy's DDJ article on
 	  Devel::GraphVizProf
@@ -131,7 +140,7 @@ Revision history for Perl module GraphViz.
           which makes graphs just work better. Not documented, do
           you want it to be?
 
-0.14 Thu May  3 17:57:57 BST 2001
+0.14 Thu May  3 17:57:57 GMT 2001
 	- added support for InterpLit node in RecDescent grammars
 	- added cumulative effect for node attributes (patch by Diego
 	  Zamboni)
@@ -165,7 +174,7 @@ Revision history for Perl module GraphViz.
 	  a regular expression
 	- now an award-winning module!
 
-0.12
+0.12 Tue Mar  6 17:37:21 GMT 2001
 	- fixed bug in redcarpet.pl example
 	- new rankdir graph attribute, which controls the direction
 	  the nodes are linked together (patch by Mark Fowler)
@@ -193,7 +202,7 @@ Revision history for Perl module GraphViz.
 	  tarball dependencies using ActiveState's package list (thanks
 	  to Brian Ingerson too ;-)
 	- new, better, testsuite
-	- better quoting (especially in ports) to allow a greater range	
+	- better quoting (especially in ports) to allow a greater range
 	  of characters
 	- new undocumented (it may change) as_graph method, which
 	  returns a graph object with the coordinates of nodes and edges
@@ -215,7 +224,7 @@ Revision history for Perl module GraphViz.
 	  including quite a few PNGs
 
 0.06 Thu Aug 24 09:33:21 2000
-	- better quoting of nodes and edges (they can now have 
+	- better quoting of nodes and edges (they can now have
 	really wierd names)
 	- new examples directory with xref.pl: "graphing subroutine
 	cross-reference reports for Perl modules" and example graph to

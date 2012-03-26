@@ -95,7 +95,7 @@ METHODS
       my $g = GraphViz->new();
       my $g = GraphViz->new(directed => 0);
       my $g = GraphViz->new(layout => 'neato', ratio => 'compress');
-      my $g = GraphViz->new(rankdir  => 1);
+      my $g = GraphViz->new(rankdir  => 'BT');
       my $g = GraphViz->new(width => 8.5, height => 11);
       my $g = GraphViz->new(width => 30, height => 20,
                             pagewidth => 8.5, pageheight => 11);
@@ -125,9 +125,9 @@ METHODS
         undirected graphs (edges do not have arrows).
 
     rankdir
-        Another attribute 'rankdir' controls the direction the nodes are
-        linked together. If true it will do left->right linking rather than
-        the default up-down linking.
+        Another attribute 'rankdir' controls the direction in which the nodes are linked
+        together. The default is 'TB' (arrows from top to bottom). Other legal values
+        are 'BT' (bottom->top), 'LR' (left->right) and 'RL' (right->left).
 
     width, height
         The 'width' and 'height' attributes control the size of the bounding

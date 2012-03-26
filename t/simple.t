@@ -51,7 +51,7 @@ graph test {
 }
 
 -- test --
-$g = GraphViz->new(rankdir => 1)
+$g = GraphViz->new(rankdir => 'LR')
 -- expect --
 digraph test {
 	rankdir=LR;

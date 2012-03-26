@@ -8,7 +8,7 @@ use Carp;
 use Config;
 use IPC::Run qw(run binary);
 
-our $VERSION = '2.09';
+our $VERSION = '2.10';
 
 =head1 NAME
 
@@ -147,7 +147,7 @@ This is the constructor. It accepts several attributes.
   my $g = GraphViz->new();
   my $g = GraphViz->new(directed => 0);
   my $g = GraphViz->new(layout => 'neato', ratio => 'compress');
-  my $g = GraphViz->new(rankdir  => 1);
+  my $g = GraphViz->new(rankdir  => 'BT');
   my $g = GraphViz->new(width => 8.5, height => 11);
   my $g = GraphViz->new(width => 30, height => 20,
 			pagewidth => 8.5, pageheight => 11);
@@ -159,7 +159,7 @@ The most two important attributes are 'layout' and 'directed'.
 =item layout
 
 The 'layout' attribute determines which layout algorithm GraphViz.pm will
-use. Possible values are: 
+use. Possible values are:
 
 =over
 
@@ -193,9 +193,9 @@ undirected graphs (edges do not have arrows).
 
 =item rankdir
 
-Another attribute 'rankdir' controls the direction the nodes are linked
-together. If true it will do left->right linking rather than the
-default up-down linking.
+Another attribute 'rankdir' controls the direction in which the nodes are linked
+together. The default is 'TB' (arrows from top to bottom). Other legal values
+are 'BT' (bottom->top), 'LR' (left->right) and 'RL' (right->left).
 
 =item width, height
 
@@ -248,13 +248,13 @@ Determines if and how node overlaps should be removed.
 
 =item true
 
-(the default) overlaps are retained. 
+(the default) overlaps are retained.
 
 =item scale
 
-overlaps are removed by uniformly scaling in x and y. 
+overlaps are removed by uniformly scaling in x and y.
 
-=item false 
+=item false
 
 If the value converts to "false", node overlaps are removed by a Voronoi-based technique.
 
@@ -269,7 +269,7 @@ constraint problems, one for the x axis and one for the y. The suffix indicates
 which axis is processed first.
 
 B<NOTE>: The methods related to "orthoxy" and "orthoyx" are still evolving. The
-semantics of these may change, or these methods may disappear altogether. 
+semantics of these may change, or these methods may disappear altogether.
 
 =item compress
 
@@ -331,7 +331,7 @@ If ratio = C<auto> the page attribute is set and the graph cannot be drawn on a
 single page, then size is set to an ``ideal'' value. In particular, the size in
 a given dimension will be the smallest integral multiple of the page size in
 that dimension which is at least half the current size. The two dimensions are
-then scaled independently to the new size. This feature only works in dot. 
+then scaled independently to the new size. This feature only works in dot.
 
 =back
 
@@ -1047,7 +1047,12 @@ sub _as_debug {
     $dot .= $graph_type . " " . $self->{NAME} . " {\n";
 
     # the direction of the graph
-    $dot .= "\trankdir=LR;\n" if $self->{RANK_DIR};
+    if ($self->{RANK_DIR}) {
+        $self->{RANK_DIR} = uc $self->{RANK_DIR};
+        my(%valid)        = (BT => 1, LR => 1, RL => 1, TB => 1);
+        $self->{RANK_DIR} = 'LR' if (! $valid{$self->{RANK_DIR} });
+        $dot              .= "\trankdir=" . $self->{RANK_DIR} . ";\n";
+    }
 
     # the size of the graph
     $dot .= "\tsize=\"" . $self->{WIDTH} . "," . $self->{HEIGHT} . "\";\n"
@@ -1309,7 +1314,7 @@ The file CHANGES was converted into Changelog.ini by L<Module::Metadata::Changes
 Leon Brocard: E<lt>F<acme@astray.com>E<gt>.
 
 Current maintainer: Ron Savage I<E<lt>ron@savage.net.auE<gt>>.
- 
+
 =head1 COPYRIGHT
 
 Copyright (C) 2000-4, Leon Brocard

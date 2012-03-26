@@ -12,7 +12,7 @@ use IPC::Run qw(run);
 
 # See perldebguts
 
-our $VERSION = '2.09';
+our $VERSION = '2.10';
 
 my $DEBUG = 0;    # whether debugging statements are shown
 
@@ -101,7 +101,7 @@ sub _init {
 
     #  die "Crap" unless $compiled;
 
-    my $g = GraphViz->new( rankdir => 1 );
+    my $g = GraphViz->new( rankdir => 'LR' );
 
     my %states;
     my %following;
