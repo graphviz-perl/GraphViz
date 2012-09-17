@@ -8,7 +8,7 @@ use lib '../..';
 use lib '..';
 use GraphViz;
 
-our $VERSION = '2.10';
+our $VERSION = '2.11';
 
 =head1 NAME
 

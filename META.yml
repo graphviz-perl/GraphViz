@@ -8,7 +8,7 @@ build_requires:
 configure_requires:
   Module::Build: 0.38
 dynamic_config: 1
-generated_by: 'Module::Build version 0.4, CPAN::Meta::Converter version 2.120630'
+generated_by: 'Module::Build version 0.4003, CPAN::Meta::Converter version 2.120630'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -17,34 +17,34 @@ name: GraphViz
 provides:
   Devel::GraphVizProf:
     file: lib/Devel/GraphVizProf.pm
-    version: 2.10
+    version: 2.11
   GraphViz:
     file: lib/GraphViz.pm
-    version: 2.10
+    version: 2.11
   GraphViz::Data::Grapher:
     file: lib/GraphViz/Data/Grapher.pm
-    version: 2.10
+    version: 2.11
   GraphViz::No:
     file: lib/GraphViz/No.pm
-    version: 2.10
+    version: 2.11
   GraphViz::Parse::RecDescent:
     file: lib/GraphViz/Parse/RecDescent.pm
-    version: 2.10
+    version: 2.11
   GraphViz::Parse::Yacc:
     file: lib/GraphViz/Parse/Yacc.pm
-    version: 2.10
+    version: 2.11
   GraphViz::Parse::Yapp:
     file: lib/GraphViz/Parse/Yapp.pm
-    version: 2.10
+    version: 2.11
   GraphViz::Regex:
     file: lib/GraphViz/Regex.pm
-    version: 2.10
+    version: 2.11
   GraphViz::Small:
     file: lib/GraphViz/Small.pm
-    version: 2.10
+    version: 2.11
   GraphViz::XML:
     file: lib/GraphViz/XML.pm
-    version: 2.10
+    version: 2.11
 requires:
   Carp: 1.01
   Config: 0
@@ -64,4 +64,4 @@ requires:
   warnings: 1.03
 resources:
   license: http://dev.perl.org/licenses/
-version: 2.10
+version: 2.11

@@ -8,7 +8,7 @@ use Carp;
 use Config;
 use IPC::Run qw(run binary);
 
-our $VERSION = '2.10';
+our $VERSION = '2.11';
 
 =head1 NAME
 
@@ -955,6 +955,12 @@ image map format file.
 
   print $g->as_imap;
 
+=item as_vdx
+
+Returns a string which contains a VDX-format (Microsoft Visio) file.
+
+  print $g->as_vdx;
+
 =item as_vrml
 
 Returns a string which contains a layed-out VRML-format file.
@@ -1021,7 +1027,7 @@ sub AUTOLOAD {
     }
 
     if ( $name
-        =~ /^as_(ps|hpgl|pcl|mif|pic|gd|gd2|gif|jpeg|png|wbmp|cmapx?|ismap|imap|vrml|vtx|mp|fig|svgz?|dot|canon|plain)$/
+        =~ /^as_(ps|hpgl|pcl|mif|pic|gd|gd2|gif|jpeg|png|wbmp|cmapx?|ismap|imap|vdx|vrml|vtx|mp|fig|svgz?|dot|canon|plain)$/
         )
     {
         my $data = $self->_as_generic( '-T' . $1, $self->_as_debug, $output );

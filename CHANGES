@@ -1,5 +1,8 @@
 Revision history for Perl module GraphViz.
 
+2.11  Tue Sep 18 08:22:00 2012
+	- Add VDX as an output format.
+
 2.10  Mon Mar 26 10:11:00 2012
 	- Accept a patch kindly supplied by Alexander Kriegisch, to change handling of the rankdir attribute.
 		The valid values are BT, LR, RL or TB, or their lower-case equivalents.
