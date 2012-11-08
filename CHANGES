@@ -1,5 +1,13 @@
 Revision history for Perl module GraphViz.
 
+2.13  Fri Nov  9 08:27:00 2012
+	- No code changes.
+	- Re-package distro because users get errors during testing. See RT#80709.
+		Since I had this same error during my testing, I assume the uploaded version contains un-patched
+		code. The errors are not in GraphViz, they are in the test code which has hard-coded line numbers
+		where it looks for strings in the output. The output has been reformatted recently, and no longer
+		matches those assumptions. See t/foo.t for details. Note: I did not write those tests :-).
+
 2.12  Thu Nov  8 12:38:00 2012
 	- No code changes.
 	- For pre-reqs such as strict, warnings, etc, which ship with Perl, set the version # to 0.
