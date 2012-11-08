@@ -84,7 +84,7 @@ sub check_result {
 
     my $expect = <<'EOF';
 Expected something like:
-    
+
 digraph test {
         node [  label = "\N" ];
         graph [bb= "0,0,66,38"];
@@ -92,11 +92,11 @@ digraph test {
 }
 EOF
 
-    # have to use regexes cause the output includes numbers that may
+    # have to use regexes because the output includes numbers that may
     # change each time
     like( $result[0], qr/^digraph test {/ );
-    like( $result[1], qr/^\s+graph \[ratio=fill\];/ );
-    like( $result[2], qr/^\s*node\s*\[\s*label\s*=\s*"\\N"\s*\];\s*/ );
-    like( $result[3], qr/^\s*graph\s*\[bb=.*/ );
-    like( $result[4], qr/^\s*node1\s*\[label=London.*\];/ );
+    like( $result[1], qr/^\s*graph\s*\[bb=.*/ );
+    like( $result[2], qr/^.+ratio=fill/ );
+    like( $result[4], qr/^\s*node\s*\[\s*label\s*=\s*"\\N"\s*\];\s*/ );
+    like( $result[6], qr/^.+label=London,/ );
 }
