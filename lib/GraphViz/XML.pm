@@ -8,7 +8,7 @@ use lib '..';
 use GraphViz;
 use XML::Twig;
 
-our $VERSION = '2.11';
+our $VERSION = '2.12';
 
 =head1 NAME
 
