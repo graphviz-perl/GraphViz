@@ -59,9 +59,9 @@ requires:
   Time::HiRes: 1.51
   XML::Twig: 3.38
   XML::XPath: 1.13
-  strict: 1.03
-  vars: 1.01
-  warnings: 1.03
+  strict: 0
+  vars: 0
+  warnings: 0
 resources:
   license: http://dev.perl.org/licenses/
 version: 2.11
