@@ -9,7 +9,7 @@ use lib '..';
 use GraphViz;
 use Parse::RecDescent;
 
-our $VERSION = '2.12';
+our $VERSION = '2.13';
 
 =head1 NAME
 
