@@ -83,7 +83,7 @@ sub check_result {
     my @result = @_;
 
     my $expect = <<'EOF';
-Expected something like:
+Expected something like (except for the line spacing :-(. Hence the join...):
 
 digraph test {
         node [  label = "\N" ];
@@ -92,11 +92,11 @@ digraph test {
 }
 EOF
 
-    # have to use regexes because the output includes numbers that may
-    # change each time
-    like( $result[0], qr/^digraph test {/ );
-    like( $result[1], qr/^\s*graph\s*\[bb=.*/ );
-    like( $result[2], qr/^.+ratio=fill/ );
-    like( $result[4], qr/^\s*node\s*\[\s*label\s*=\s*"\\N"\s*\];\s*/ );
-    like( $result[6], qr/^.+label=London,/ );
+	my($result) = join(' ', @result);
+
+    like( $result, qr/digraph test {/ );
+    like( $result, qr/\s*graph\s*\[bb=.*/ );
+    like( $result, qr/.+ratio=fill/ );
+    like( $result, qr/\s*node\s*\[\s*label\s*=\s*"\\N"\s*\];\s*/ );
+    like( $result, qr/.+label=London,/ );
 }

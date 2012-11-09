@@ -1,5 +1,9 @@
 Revision history for Perl module GraphViz.
 
+2.14  Fri Nov  9 16:06:00 2012
+	- No code changes.
+	- Patch t/foo.t to not assume text appears on specific lines of the output test files.
+
 2.13  Fri Nov  9 08:27:00 2012
 	- No code changes.
 	- Re-package distro because users get errors during testing. See RT#80709.
