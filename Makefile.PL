@@ -16,7 +16,7 @@ WriteMakefile
  NAME         => 'GraphViz',
  VERSION_FROM => 'lib/GraphViz.pm',
  AUTHOR       => 'Leon Brocard <acme@astray.com>',
- LICENSE        => 'perl_5',,
+ LICENSE        => 'artistic_2',,
  ABSTRACT     => "Interface to AT&T's GraphViz. Deprecated. See GraphViz2",
  PREREQ_PM    =>
  {
