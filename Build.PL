@@ -17,7 +17,7 @@ Module::Build -> new
  dist_author    => 'Leon Brocard <acme@astray.com>',
  build_requires =>
  {
- 	 Test::Simple=> 0.47,
+ 	 Test::More=> 0.47,
  	 Test::Pod  => 1.45,
  },
  configure_requires =>

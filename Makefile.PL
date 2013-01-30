@@ -31,7 +31,7 @@ WriteMakefile
 	 Parse::RecDescent => 1.965001,
 	 Pod::Usage        => 1.16,
 	 strict            => 0,
- 	 Test::Simple      => 0.47,
+ 	 Test::More      => 0.47,
  	 Test::Pod         => 1.45,
 	 Time::HiRes       => 1.51,
 	 vars              => 0,
