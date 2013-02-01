@@ -32,7 +32,7 @@ WriteMakefile
 	 Pod::Usage        => 1.16,
 	 strict            => 0,
  	 Test::More      => 0.47,
- 	 Test::Pod         => 1.45,
+# 	 Test::Pod         => 1.45, # Make it optional. See t/pod.t
 	 Time::HiRes       => 1.51,
 	 vars              => 0,
 	 warnings          => 0,
