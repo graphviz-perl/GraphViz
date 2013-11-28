@@ -1,5 +1,10 @@
 Revision history for Perl module GraphViz.
 
+2.15  Thu Nov 28 11:23:00 2013
+	- Fix double-quote escaping bug in GraphViz's _attributes() method. See RT#90528.
+		Many thanx to Smylers for the report.
+	- Rename CHANGES to Changes as per CPAN::Changes::Spec.
+
 2.14  Fri Nov  9 16:06:00 2012
 	- No code changes.
 	- Patch t/foo.t to not assume text appears on specific lines of the output test files.

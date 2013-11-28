@@ -8,7 +8,7 @@ use Carp;
 use Config;
 use IPC::Run qw(run binary);
 
-our $VERSION = '2.14';
+our $VERSION = '2.15';
 
 =head1 NAME
 
@@ -1283,13 +1283,16 @@ sub _attributes {
         next if $key =~ /^_/;
         next if $key =~ /^(to|from|name|cluster|from_port|to_port)$/;
 
-        my $value = $thing->{$key};
-        $value =~ s|"|\"|g;
-        $value = '"' . $value . '"'
-            unless ( $key eq 'label' && $value =~ /^<</ );
-        $value =~ s|\n|\\n|g;
+        my $value = $thing->{$key} || '';
 
-        $value = '""' if not defined $value;
+		if ( $key ne 'label' || $value !~ /^<</ )
+		{
+	        $value =~ s|"|\\"|g;
+   		    $value = '"' . $value . '"'
+		}
+       	$value =~ s|\n|\\n|g;
+        $value = '""' if ( ($value eq '') && ($value ne '""') );
+
         push @attributes, "$key=$value";
     }
 

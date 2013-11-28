@@ -4,9 +4,9 @@
       "Leon Brocard <acme@astray.com>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "Module::Build version 0.4003, CPAN::Meta::Converter version 2.120630",
+   "generated_by" : "Module::Build version 0.4005, CPAN::Meta::Converter version 2.131560",
    "license" : [
-      "perl_5"
+      "artistic_2"
    ],
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
@@ -16,8 +16,7 @@
    "prereqs" : {
       "build" : {
          "requires" : {
-            "Test::More" : "0.47",
-            "Test::Pod" : "1.44"
+            "Test::More" : "0.47"
          }
       },
       "configure" : {
@@ -40,6 +39,7 @@
             "Time::HiRes" : "1.51",
             "XML::Twig" : "3.38",
             "XML::XPath" : "1.13",
+            "lib" : "0",
             "strict" : "0",
             "vars" : "0",
             "warnings" : "0"
@@ -49,50 +49,50 @@
    "provides" : {
       "Devel::GraphVizProf" : {
          "file" : "lib/Devel/GraphVizProf.pm",
-         "version" : "2.14"
+         "version" : "2.15"
       },
       "GraphViz" : {
          "file" : "lib/GraphViz.pm",
-         "version" : "2.14"
+         "version" : "2.15"
       },
       "GraphViz::Data::Grapher" : {
          "file" : "lib/GraphViz/Data/Grapher.pm",
-         "version" : "2.14"
+         "version" : "2.15"
       },
       "GraphViz::No" : {
          "file" : "lib/GraphViz/No.pm",
-         "version" : "2.14"
+         "version" : "2.15"
       },
       "GraphViz::Parse::RecDescent" : {
          "file" : "lib/GraphViz/Parse/RecDescent.pm",
-         "version" : "2.14"
+         "version" : "2.15"
       },
       "GraphViz::Parse::Yacc" : {
          "file" : "lib/GraphViz/Parse/Yacc.pm",
-         "version" : "2.14"
+         "version" : "2.15"
       },
       "GraphViz::Parse::Yapp" : {
          "file" : "lib/GraphViz/Parse/Yapp.pm",
-         "version" : "2.14"
+         "version" : "2.15"
       },
       "GraphViz::Regex" : {
          "file" : "lib/GraphViz/Regex.pm",
-         "version" : "2.14"
+         "version" : "2.15"
       },
       "GraphViz::Small" : {
          "file" : "lib/GraphViz/Small.pm",
-         "version" : "2.14"
+         "version" : "2.15"
       },
       "GraphViz::XML" : {
          "file" : "lib/GraphViz/XML.pm",
-         "version" : "2.14"
+         "version" : "2.15"
       }
    },
    "release_status" : "stable",
    "resources" : {
       "license" : [
-         "http://dev.perl.org/licenses/"
+         "http://www.perlfoundation.org/artistic_license_2_0"
       ]
    },
-   "version" : "2.14"
+   "version" : "2.15"
 }
