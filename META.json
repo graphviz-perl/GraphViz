@@ -4,7 +4,7 @@
       "Leon Brocard <acme@astray.com>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "Module::Build version 0.4005, CPAN::Meta::Converter version 2.131560",
+   "generated_by" : "Module::Build version 0.4207",
    "license" : [
       "artistic_2"
    ],
@@ -49,50 +49,50 @@
    "provides" : {
       "Devel::GraphVizProf" : {
          "file" : "lib/Devel/GraphVizProf.pm",
-         "version" : "2.15"
+         "version" : "2.16"
       },
       "GraphViz" : {
          "file" : "lib/GraphViz.pm",
-         "version" : "2.15"
+         "version" : "2.16"
       },
       "GraphViz::Data::Grapher" : {
          "file" : "lib/GraphViz/Data/Grapher.pm",
-         "version" : "2.15"
+         "version" : "2.16"
       },
       "GraphViz::No" : {
          "file" : "lib/GraphViz/No.pm",
-         "version" : "2.15"
+         "version" : "2.16"
       },
       "GraphViz::Parse::RecDescent" : {
          "file" : "lib/GraphViz/Parse/RecDescent.pm",
-         "version" : "2.15"
+         "version" : "2.16"
       },
       "GraphViz::Parse::Yacc" : {
          "file" : "lib/GraphViz/Parse/Yacc.pm",
-         "version" : "2.15"
+         "version" : "2.16"
       },
       "GraphViz::Parse::Yapp" : {
          "file" : "lib/GraphViz/Parse/Yapp.pm",
-         "version" : "2.15"
+         "version" : "2.16"
       },
       "GraphViz::Regex" : {
          "file" : "lib/GraphViz/Regex.pm",
-         "version" : "2.15"
+         "version" : "2.16"
       },
       "GraphViz::Small" : {
          "file" : "lib/GraphViz/Small.pm",
-         "version" : "2.15"
+         "version" : "2.16"
       },
       "GraphViz::XML" : {
          "file" : "lib/GraphViz/XML.pm",
-         "version" : "2.15"
+         "version" : "2.16"
       }
    },
    "release_status" : "stable",
    "resources" : {
       "license" : [
-         "http://www.perlfoundation.org/artistic_license_2_0"
+         "http://opensource.org/licenses/artistic-license-2.0.php"
       ]
    },
-   "version" : "2.15"
+   "version" : "2.16"
 }

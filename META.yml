@@ -3,65 +3,65 @@ abstract: "Interface to AT&T's GraphViz. Deprecated. See GraphViz2"
 author:
   - 'Leon Brocard <acme@astray.com>'
 build_requires:
-  Test::More: 0.47
+  Test::More: '0.47'
 configure_requires:
-  Module::Build: 0.38
+  Module::Build: '0.38'
 dynamic_config: 1
-generated_by: 'Module::Build version 0.4005, CPAN::Meta::Converter version 2.131560'
+generated_by: 'Module::Build version 0.4207, CPAN::Meta::Converter version 2.142060'
 license: artistic_2
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
-  version: 1.4
+  version: '1.4'
 name: GraphViz
 provides:
   Devel::GraphVizProf:
     file: lib/Devel/GraphVizProf.pm
-    version: 2.15
+    version: '2.16'
   GraphViz:
     file: lib/GraphViz.pm
-    version: 2.15
+    version: '2.16'
   GraphViz::Data::Grapher:
     file: lib/GraphViz/Data/Grapher.pm
-    version: 2.15
+    version: '2.16'
   GraphViz::No:
     file: lib/GraphViz/No.pm
-    version: 2.15
+    version: '2.16'
   GraphViz::Parse::RecDescent:
     file: lib/GraphViz/Parse/RecDescent.pm
-    version: 2.15
+    version: '2.16'
   GraphViz::Parse::Yacc:
     file: lib/GraphViz/Parse/Yacc.pm
-    version: 2.15
+    version: '2.16'
   GraphViz::Parse::Yapp:
     file: lib/GraphViz/Parse/Yapp.pm
-    version: 2.15
+    version: '2.16'
   GraphViz::Regex:
     file: lib/GraphViz/Regex.pm
-    version: 2.15
+    version: '2.16'
   GraphViz::Small:
     file: lib/GraphViz/Small.pm
-    version: 2.15
+    version: '2.16'
   GraphViz::XML:
     file: lib/GraphViz/XML.pm
-    version: 2.15
+    version: '2.16'
 requires:
-  Carp: 1.01
-  Config: 0
-  File::Which: 1.09
-  Getopt::Long: 2.34
-  IO::Dir: 1.04
-  IO::File: 1.1
-  IPC::Run: 0.6
-  LWP::Simple: 6
-  Parse::RecDescent: 1.965001
-  Pod::Usage: 1.16
-  Time::HiRes: 1.51
-  XML::Twig: 3.38
-  XML::XPath: 1.13
-  lib: 0
-  strict: 0
-  vars: 0
-  warnings: 0
+  Carp: '1.01'
+  Config: '0'
+  File::Which: '1.09'
+  Getopt::Long: '2.34'
+  IO::Dir: '1.04'
+  IO::File: '1.1'
+  IPC::Run: '0.6'
+  LWP::Simple: '6'
+  Parse::RecDescent: '1.965001'
+  Pod::Usage: '1.16'
+  Time::HiRes: '1.51'
+  XML::Twig: '3.38'
+  XML::XPath: '1.13'
+  lib: '0'
+  strict: '0'
+  vars: '0'
+  warnings: '0'
 resources:
-  license: http://www.perlfoundation.org/artistic_license_2_0
-version: 2.15
+  license: http://opensource.org/licenses/artistic-license-2.0.php
+version: '2.16'
