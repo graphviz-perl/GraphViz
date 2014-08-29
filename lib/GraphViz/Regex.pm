@@ -12,7 +12,7 @@ use IPC::Run qw(run);
 
 # See perldebguts
 
-our $VERSION = '2.15';
+our $VERSION = '2.16';
 
 my $DEBUG = 0;    # whether debugging statements are shown
 

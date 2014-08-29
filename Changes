@@ -1,5 +1,9 @@
 Revision history for Perl module GraphViz.
 
+2.16  Sat Aug 30 08:25:00 2014
+	- Update docs on how to download AT&T's Graphviz.
+		Thanx to Alex Becker (see RT#98405).
+
 2.15  Thu Nov 28 11:23:00 2013
 	- Fix double-quote escaping bug in GraphViz's _attributes() method. See RT#90528.
 		Many thanx to Smylers for the report.

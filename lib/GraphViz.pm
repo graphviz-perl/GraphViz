@@ -8,7 +8,9 @@ use Carp;
 use Config;
 use IPC::Run qw(run binary);
 
-our $VERSION = '2.15';
+our $VERSION = '2.16';
+
+=pod
 
 =head1 NAME
 
@@ -35,10 +37,46 @@ GraphViz - Interface to AT&T's GraphViz. Deprecated. See GraphViz2
 
 This module provides an interface to layout and image generation of directed
 and undirected graphs in a variety of formats (PostScript, PNG, etc.) using the
-"dot", "neato", "twopi", "circo" and "fdp"  programs from the GraphViz project
+"dot", "neato", "twopi", "circo" and "fdp"  programs from the Graphviz project
 (http://www.graphviz.org/ or http://www.research.att.com/sw/tools/graphviz/).
 
 GraphViz is deprecated in favour of L<GraphViz2>.
+
+=head1 Installation
+
+Of course you need to install AT&T's Graphviz before using this module.
+See L<http://www.graphviz.org/Download.php>.
+
+You are strongly advised to download the stable version of Graphviz, because the
+development snapshots (click on 'Source code'), are sometimes non-functional.
+
+Install L<GraphViz> as you would for any C<Perl> module:
+
+Run:
+
+	cpanm GraphViz
+
+	Note: cpanm ships in L<App::cpanminus>. See also L<App::perlbrew>.
+
+or run:
+
+	sudo cpan GraphViz
+
+or unpack the distro, and then either:
+
+	perl Build.PL
+	./Build
+	./Build test
+	sudo ./Build install
+
+or:
+
+	perl Makefile.PL
+	make (or dmake or nmake)
+	make test
+	make install
+
+=head1 Overview
 
 =head2 Modules in this distro
 
@@ -242,7 +280,6 @@ The 'overlap' option allows you to set layout behavior for graph nodes
 that overlap.  (From GraphViz documentation:)
 
 Determines if and how node overlaps should be removed.
-
 
 =over
 
@@ -737,7 +774,7 @@ labelfontname, labelfontsize are also allowed
 
 sets the distance from the edge / port to the label. Also labelangle
 
-=item decorateP
+=item decorate
 
 if set, draws a line from the edge to the label
 
