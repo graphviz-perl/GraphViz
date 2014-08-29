@@ -56,7 +56,7 @@ Run:
 
 	cpanm GraphViz
 
-	Note: cpanm ships in L<App::cpanminus>. See also L<App::perlbrew>.
+	Note: cpanm ships in App::cpanminus. See also App::perlbrew.
 
 or run:
 
