@@ -63,5 +63,5 @@ requires:
   vars: '0'
   warnings: '0'
 resources:
-  license: http://opensource.org/licenses/artistic-license-2.0.php
+  license: http://www.perlfoundation.org/artistic_license_2_0
 version: '2.16'
