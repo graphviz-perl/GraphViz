@@ -1379,7 +1379,7 @@ GraphViz is deprecated in favour of L<GraphViz2>.
 
 =head1 Machine-Readable Change Log
 
-The file CHANGES was converted into Changelog.ini by L<Module::Metadata::Changes>.
+The file Changes was converted into Changelog.ini by L<Module::Metadata::Changes>.
 
 =head1 AUTHOR
 
