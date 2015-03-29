@@ -2,8 +2,9 @@ Revision history for Perl module GraphViz.
 
 2.17  Mon Mar 30 08:56;00 2015
 	- No code changes.
-	- Create github repo.
-	- Update Build.PL and Makefile.PL to point to the repo.
+	- Create github repo. This has been done because ribasushi (Peter Rabbitson) has kindly offered
+		some patches. Hence I've reversed my policy of encouraging this module to die :-).
+	- Update Build.PL and Makefile.PL to point to the repo. None of the pre-reqs were updated.
 
 2.16  Sat Aug 30 08:25:00 2014
 	- Update docs on how to download AT&T's Graphviz.
