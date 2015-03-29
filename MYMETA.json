@@ -54,7 +54,7 @@
       },
       "GraphViz" : {
          "file" : "lib/GraphViz.pm",
-         "version" : "2.16"
+         "version" : "2.17"
       },
       "GraphViz::Data::Grapher" : {
          "file" : "lib/GraphViz/Data/Grapher.pm",
@@ -93,7 +93,10 @@
    "resources" : {
       "license" : [
          "http://www.perlfoundation.org/artistic_license_2_0"
-      ]
+      ],
+      "repository" : {
+         "url" : "https://github.com/ronsavage/GraphViz"
+      }
    },
-   "version" : "2.16"
+   "version" : "2.17"
 }
