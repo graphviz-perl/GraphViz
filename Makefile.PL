@@ -16,14 +16,26 @@ else
 	die "Please install Graphviz from http://www.graphviz.org/.\n";
 }
 
-WriteMakefile
+my(%params) =
 (
-	NAME         => 'GraphViz',
-	VERSION_FROM => 'lib/GraphViz.pm',
-	AUTHOR       => 'Leon Brocard <acme@astray.com>',
-	LICENSE      => 'artistic_2',,
-	ABSTRACT     => "Interface to AT&T's GraphViz. Deprecated. See GraphViz2",
-	PREREQ_PM    =>
+	($] ge '5.005') ?
+	(
+		AUTHOR   => 'Leon Brocard <acme@astray.com>',
+		ABSTRACT => "Interface to AT&T's GraphViz. Deprecated. See GraphViz2",
+	) : (),
+	clean =>
+	{
+		FILES => 'blib/* Makefile MANIFEST GraphViz-*'
+	},
+	dist =>
+	{
+		'COMPRESS' => 'gzip -9f',
+		'SUFFIX' => 'gz',
+	},
+	DISTNAME  => 'GraphViz',
+	LICENSE   => 'artistic_2',
+	NAME      => 'GraphViz',
+	PREREQ_PM =>
 	{
 		'Carp' => 1.01,
 		'Config' => 0,
@@ -45,9 +57,24 @@ WriteMakefile
 		'XML::Twig' => 3.38,
 		'XML::XPath' => 1.13,
 	},
-	dist =>
-	{
-		'COMPRESS' => 'gzip -9f',
-		'SUFFIX' => 'gz',
-	},
+	VERSION_FROM => 'lib/GraphViz.pm',
 );
+
+if ( ($ExtUtils::MakeMaker::VERSION =~ /^\d\.\d\d$/) && ($ExtUtils::MakeMaker::VERSION > 6.30) )
+{
+	$params{LICENSE} = 'artistic_2';
+}
+
+if ($ExtUtils::MakeMaker::VERSION ge '6.46')
+{
+	$params{META_MERGE} =
+	{
+		resources =>
+		{
+			'bugtracker' => 'https://rt.cpan.org/Public/Dist/Display.html?Name=GraphViz',
+			'license' => 'http://opensource.org/licenses/Artistic-2.0',
+		},
+	};
+}
+
+WriteMakefile(%params);
