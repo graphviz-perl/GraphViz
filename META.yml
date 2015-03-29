@@ -3,11 +3,12 @@ abstract: "Interface to AT&T's GraphViz. Deprecated. See GraphViz2"
 author:
   - 'Leon Brocard <acme@astray.com>'
 build_requires:
-  Test::More: '0.47'
+  Test::More: '1.001014'
+  Test::Pod: '1.48'
 configure_requires:
-  Module::Build: '0.38'
+  Module::Build: '0.4211'
 dynamic_config: 1
-generated_by: 'Module::Build version 0.4211, CPAN::Meta::Converter version 2.142060'
+generated_by: 'Module::Build version 0.4211, CPAN::Meta::Converter version 2.143240'
 license: artistic_2
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -19,7 +20,7 @@ provides:
     version: '2.16'
   GraphViz:
     file: lib/GraphViz.pm
-    version: '2.16'
+    version: '2.17'
   GraphViz::Data::Grapher:
     file: lib/GraphViz/Data/Grapher.pm
     version: '2.16'
@@ -64,4 +65,5 @@ requires:
   warnings: '0'
 resources:
   license: http://www.perlfoundation.org/artistic_license_2_0
-version: '2.16'
+  repository: https://github.com/ronsavage/GraphViz
+version: '2.17'

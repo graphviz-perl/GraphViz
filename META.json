@@ -16,12 +16,13 @@
    "prereqs" : {
       "build" : {
          "requires" : {
-            "Test::More" : "0.47"
+            "Test::More" : "1.001014",
+            "Test::Pod" : "1.48"
          }
       },
       "configure" : {
          "requires" : {
-            "Module::Build" : "0.38"
+            "Module::Build" : "0.4211"
          }
       },
       "runtime" : {
@@ -53,7 +54,7 @@
       },
       "GraphViz" : {
          "file" : "lib/GraphViz.pm",
-         "version" : "2.16"
+         "version" : "2.17"
       },
       "GraphViz::Data::Grapher" : {
          "file" : "lib/GraphViz/Data/Grapher.pm",
@@ -92,7 +93,10 @@
    "resources" : {
       "license" : [
          "http://www.perlfoundation.org/artistic_license_2_0"
-      ]
+      ],
+      "repository" : {
+         "url" : "https://github.com/ronsavage/GraphViz"
+      }
    },
-   "version" : "2.16"
+   "version" : "2.17"
 }
