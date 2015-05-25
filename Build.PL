@@ -43,6 +43,8 @@ Module::Build -> new
 		resources =>
 		{
 		'repository' => 'https://github.com/ronsavage/GraphViz',
+		'bugtracker' => 'https://rt.cpan.org/Public/Dist/Display.html?Name=GraphViz',
+		'license' => 'http://opensource.org/licenses/Artistic-2.0',
 		},
 	},
 	requires =>
@@ -64,10 +66,5 @@ Module::Build -> new
 		'XML::Twig' => 3.38,
 		'XML::XPath' => 1.13,
 		'perl' => 5.006,
-	},
-	resources =>
-	{
-		'bugtracker' => 'https://rt.cpan.org/Public/Dist/Display.html?Name=GraphViz',
-		'license' => 'http://opensource.org/licenses/Artistic-2.0',
 	},
 ) -> create_build_script();
