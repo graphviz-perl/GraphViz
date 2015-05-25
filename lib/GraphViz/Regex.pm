@@ -2,7 +2,6 @@ package GraphViz::Regex;
 
 use strict;
 use warnings;
-use vars qw($VERSION);
 use Carp;
 use Config;
 use lib '../..';

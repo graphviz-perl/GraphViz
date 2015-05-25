@@ -1,8 +1,9 @@
 package GraphViz;
 
+use 5.006;
 use strict;
 use warnings;
-use vars qw($AUTOLOAD $VERSION);
+our $AUTOLOAD;
 
 use Carp;
 use Config;

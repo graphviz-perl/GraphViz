@@ -3,9 +3,8 @@ package GraphViz::No;
 use strict;
 use warnings;
 use GraphViz;
-use vars qw($VERSION @ISA);
 
-@ISA = qw(GraphViz);
+our @ISA = qw(GraphViz);
 
 our $VERSION = '2.16';
 

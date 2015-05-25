@@ -2,7 +2,6 @@ package GraphViz::XML;
 
 use strict;
 use warnings;
-use vars qw($VERSION);
 use Carp;
 use lib '..';
 use GraphViz;

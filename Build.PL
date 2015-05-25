@@ -63,6 +63,7 @@ Module::Build -> new
 		'warnings' => 0,
 		'XML::Twig' => 3.38,
 		'XML::XPath' => 1.13,
+		'perl' => 5.006,
 	},
 	resources =>
 	{
