@@ -1,3 +1,4 @@
+use 5.006;
 use strict;
 use warnings;
 
@@ -7,13 +8,23 @@ use ExtUtils::MakeMaker;
 
 # ----------------
 
-if (open my $fh, '|dot', )
-{
-	close $fh;
-}
-else
-{
-	die "Please install Graphviz from http://www.graphviz.org/.\n";
+if ($^O eq 'MSWin32') {
+	require File::Which;
+	if (!File::Which::which('dot'))
+	{
+		print "Please install Graphviz from http://www.graphviz.org/.\n";
+		exit;
+	}
+} else {
+	if (open my $fh, '|dot', )
+	{
+		close $fh;
+	}
+	else
+	{
+		print "Please install Graphviz from http://www.graphviz.org/.\n";
+		exit;
+	}
 }
 
 my(%params) =

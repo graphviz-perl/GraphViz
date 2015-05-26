@@ -3,13 +3,23 @@ use warnings;
 
 use Module::Build;
 
-if (open my $fh, '|dot', )
-{
-	close $fh;
-}
-else
-{
-	die "Please install Graphviz from http://www.graphviz.org/.\n";
+if ($^O eq 'MSWin32') {
+	require File::Which;
+	if (!File::Which::which('dot'))
+	{
+		print "Please install Graphviz from http://www.graphviz.org/.\n";
+		exit;
+	}
+} else {
+	if (open my $fh, '|dot', )
+	{
+		close $fh;
+	}
+	else
+	{
+		print "Please install Graphviz from http://www.graphviz.org/.\n";
+		exit;
+	}
 }
 
 Module::Build -> new
@@ -26,19 +36,21 @@ Module::Build -> new
 	configure_requires =>
 	{
 		'Module::Build' => 0.4211,
+		'File::Which' => 1.09,
 	},
 	meta_merge =>
 	{
 		resources =>
 		{
 		'repository' => 'https://github.com/ronsavage/GraphViz',
+		'bugtracker' => 'https://rt.cpan.org/Public/Dist/Display.html?Name=GraphViz',
+		'license' => 'http://opensource.org/licenses/Artistic-2.0',
 		},
 	},
 	requires =>
 	{
 		'Carp' => 1.01,
 		'Config' => 0,
-		'File::Which' => 1.09,
 		'Getopt::Long' => 2.34,
 		'IO::Dir' => 1.04,
 		'IO::File' => 1.10,
@@ -53,10 +65,6 @@ Module::Build -> new
 		'warnings' => 0,
 		'XML::Twig' => 3.38,
 		'XML::XPath' => 1.13,
-	},
-	resources =>
-	{
-		'bugtracker' => 'https://rt.cpan.org/Public/Dist/Display.html?Name=GraphViz',
-		'license' => 'http://opensource.org/licenses/Artistic-2.0',
+		'perl' => 5.006,
 	},
 ) -> create_build_script();
