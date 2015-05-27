@@ -1,5 +1,10 @@
 Revision history for Perl module GraphViz.
 
+2.18  Thu May 28 08:43:00 2015
+	- All patches to this version are from chrony, via a github pull request. With thanx.
+	- Use File::Which on Windows to detect if Graphviz is present.
+	- Clean up the code, including Build.PL and Makefile.PL.
+
 2.17  Mon Mar 30 08:56;00 2015
 	- No code changes.
 	- Create github repo. This has been done because ribasushi (Peter Rabbitson) has kindly offered
