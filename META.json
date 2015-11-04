@@ -103,5 +103,6 @@
          "url" : "https://github.com/ronsavage/GraphViz"
       }
    },
-   "version" : "2.18"
+   "version" : "2.18",
+   "x_deprecated": "1"
 }

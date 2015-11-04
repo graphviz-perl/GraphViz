@@ -69,3 +69,4 @@ resources:
   license: http://www.perlfoundation.org/artistic_license_2_0
   repository: https://github.com/ronsavage/GraphViz
 version: '2.18'
+x_deprecated: '1'
