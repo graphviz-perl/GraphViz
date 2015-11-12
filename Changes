@@ -1,5 +1,11 @@
 Revision history for Perl module GraphViz.
 
+2.19  Fri Nov 13 08:30:00 2015
+	- No code changes.
+	- Accept pull request from Patrice Clement to add the x_deprecated flag to both META.json and
+		META.yml. The docs already had various references to 'deprecated', including directing users
+		to GraphViz2, so no change is needed there. Thanx Patrice.
+
 2.18  Thu May 28 08:43:00 2015
 	- All patches to this version are from chrony, via a github pull request. With thanx.
 	- Use File::Which on Windows to detect if Graphviz is present.
