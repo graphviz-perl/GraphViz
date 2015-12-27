@@ -56,7 +56,7 @@ sub DB {
   # evals which do not define subroutines will disappear.
   no strict 'refs';
   $DB::listings{$filename} = \@{"main::_<$filename"} if 
-    defined(@{"main::_<$filename"});
+    @{"main::_<$filename"};
   use strict 'refs';
 
 #  warn $DB::prevl . " -> " . $line . "\n";
@@ -197,7 +197,7 @@ sub sub {
   if (defined($DB::sub{$DB::sub})) {
     my($m,$s) = ($DB::sub{$DB::sub} =~ /.+(?=:)|[^:-]+/g);
     $DB::profiles{$m}->[$s]++;
-    $DB::listings{$m} = \@{"main::_<$m"} if defined(@{"main::_<$m"});
+    $DB::listings{$m} = \@{"main::_<$m"} if @{"main::_<$m"};
   }
   goto &$DB::sub;
 }
