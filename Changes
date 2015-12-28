@@ -1,16 +1,16 @@
 Revision history for Perl module GraphViz.
 
-2.20  Tue Dec 29 08:13:00 2015
+2.20  2015-12-29T08:13:00
 	- Merge patch from ntyni via github. This concerned use of defined(@some_array). With thanx.
 
-2.19  Fri Nov 13 08:30:00 2015
+2.19  2015-11-13T08:30:00
 	- No code changes.
 	- Accept pull request from Patrice Clement to add the x_deprecated flag to both META.json and
 		META.yml. The docs already had various references to 'deprecated', including directing users
 		to GraphViz2, so no change is needed there. Thanx Patrice.
 	- Add .gitignore to MANIFEST.SKIP.
 
-2.18  Thu May 28 08:43:00 2015
+2.18  2015-05-28T08:43:00
 	- All patches to this version are from chrony, via a github pull request. With thanx.
 	- Use File::Which on Windows to detect if Graphviz is present.
 	- Clean up the code, including Build.PL and Makefile.PL.
@@ -21,20 +21,20 @@ Revision history for Perl module GraphViz.
 		some patches. Hence I've reversed my policy of encouraging this module to die :-).
 	- Update Build.PL and Makefile.PL to point to the repo. None of the pre-reqs were updated.
 
-2.16  Sat Aug 30 08:25:00 2014
+2.16  2014-08-30T08:25:00
 	- Update docs on how to download AT&T's Graphviz.
 		Thanx to Alex Becker (see RT#98405).
 
-2.15  Thu Nov 28 11:23:00 2013
+2.15  2013-11-28T11:23:00
 	- Fix double-quote escaping bug in GraphViz's _attributes() method. See RT#90528.
 		Many thanx to Smylers for the report.
 	- Rename CHANGES to Changes as per CPAN::Changes::Spec.
 
-2.14  Fri Nov  9 16:06:00 2012
+2.14  2012-11-09T16:06:00
 	- No code changes.
 	- Patch t/foo.t to not assume text appears on specific lines of the output test files.
 
-2.13  Fri Nov  9 08:27:00 2012
+2.13  2012-11-09T08:27:00
 	- No code changes.
 	- Re-package distro because users get errors during testing. See RT#80709.
 		Since I had this same error during my testing, I assume the uploaded version contains un-patched
@@ -42,15 +42,15 @@ Revision history for Perl module GraphViz.
 		where it looks for strings in the output. The output has been reformatted recently, and no longer
 		matches those assumptions. See t/foo.t for details. Note: I did not write those tests :-).
 
-2.12  Thu Nov  8 12:38:00 2012
+2.12  2012-11-08T12:38:00
 	- No code changes.
 	- For pre-reqs such as strict, warnings, etc, which ship with Perl, set the version # to 0.
 		Reported as RT#80663 by Father Chrysostomos for Tree::DAG_Node.
 
-2.11  Tue Sep 18 08:22:00 2012
+2.11  2012-09-18T08:22:00
 	- Add VDX as an output format.
 
-2.10  Mon Mar 26 10:11:00 2012
+2.10  2012-03-26T10:11:00
 	- Accept a patch kindly supplied by Alexander Kriegisch, to change handling of the rankdir attribute.
 		The valid values are BT, LR, RL or TB, or their lower-case equivalents.
 		Previously, only a true value was accepted, which meant LR. Now, any value not in that list defaults to LR.
@@ -59,7 +59,7 @@ Revision history for Perl module GraphViz.
 		fail to recognize BST.
 		These modules are used by Module::Metadata::Changes to transform this file into Changelog.ini.
 
-2.09  Thu Dec 15 11:08:00 2011
+2.09  2011-12-15T11:08:00
 	  - Adopt Flavio Poletti's suggestion of trying to pipe to dot, in Build.PL/Makefile.PL, rather than using File::Which,
 	  	to see if dot (Graphviz) is installed. This (hopefully) solves the problem of using File::Which on systems where it is
 		not installed, before Build.PL/Makefile.PL has a chance to tell the user that File::Which is required. See: RT#73077.
@@ -286,5 +286,4 @@ Revision history for Perl module GraphViz.
 
 0.04 Wed Aug  9 16:14:35 2000
 	- first released version
-
 
