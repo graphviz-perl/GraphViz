@@ -1,5 +1,8 @@
 Revision history for Perl module GraphViz.
 
+2.20  Tue Dec 29 08:13:00 2015
+	- Merge patch from ntyni via github. This concerned use of defined(@some_array). With thanx.
+
 2.19  Fri Nov 13 08:30:00 2015
 	- No code changes.
 	- Accept pull request from Patrice Clement to add the x_deprecated flag to both META.json and

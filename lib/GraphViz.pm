@@ -9,7 +9,7 @@ use Carp;
 use Config;
 use IPC::Run qw(run binary);
 
-our $VERSION = '2.19';
+our $VERSION = '2.20';
 
 =pod
 
