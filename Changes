@@ -1,5 +1,8 @@
 Revision history for Perl module GraphViz.
 
+2.21  2016-01-23T10:30:00
+	- Fix a typo in a comment, as provided by Gregor Herrmann in RT#111385.
+
 2.20  2015-12-29T08:13:00
 	- Merge patch from ntyni via github. This concerned use of defined(@some_array). With thanx.
 

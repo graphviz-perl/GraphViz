@@ -392,7 +392,7 @@ The 'node', 'edge' and 'graph' attributes allow you to specify global
 node, edge and graph attributes (in addition to those controlled by
 the special attributes described above). The value should be a hash
 reference containing the corresponding key-value pairs. For example,
-to make all nodes box-shaped (unless explicity given another shape):
+to make all nodes box-shaped (unless explicitly given another shape):
 
   my $g = GraphViz->new(node => {shape => 'box'});
 
