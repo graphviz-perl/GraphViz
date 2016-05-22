@@ -67,11 +67,11 @@ my(%params) =
 		'warnings'			=> 0,
 		'XML::Twig'			=> 3.38,
 		'XML::XPath'		=> 1.13,
+	},
 	TEST_REQUIRES =>
 	{
 		'Test::More'	=> 1.001014,
 		'Test::Pod'		=> 1.48,
-	},
 	},
 	VERSION_FROM => 'lib/GraphViz.pm',
 );
