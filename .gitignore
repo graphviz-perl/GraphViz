@@ -19,4 +19,4 @@ nytprof.out
 *.o
 *.bs
 /_eumm/
-/GraphViz2-*
+/GraphViz-*

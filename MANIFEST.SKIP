@@ -40,3 +40,5 @@
 
 ^MYMETA.yml$
 ^MYMETA\.json$
+
+^GraphViz-.*

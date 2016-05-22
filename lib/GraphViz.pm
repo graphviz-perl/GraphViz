@@ -1392,6 +1392,8 @@ Leon Brocard: E<lt>F<acme@astray.com>E<gt>.
 
 Current maintainer: Ron Savage I<E<lt>ron@savage.net.auE<gt>>.
 
+My homepage: L<http://savage.net.au/>.
+
 =head1 COPYRIGHT
 
 Copyright (C) 2000-4, Leon Brocard
