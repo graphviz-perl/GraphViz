@@ -7,7 +7,7 @@ use File::Which 'which';
 
 use GraphViz::Data::Grapher;
 
-use Test::More tests => 1;
+use Test2::Bundle::Extended;
 
 # ------------------------
 
@@ -37,6 +37,8 @@ foreach my $lines ( split '-- test --', ( join "", @lines ) ) {
 
     is( $result, $expect, "got expected graph" );
 }
+
+done_testing;
 
 __DATA__
 -- test --

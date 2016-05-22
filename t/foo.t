@@ -8,7 +8,7 @@ use File::Which 'which';
 
 use GraphViz;
 
-use Test::More tests => 30;
+use Test2::Bundle::Extended;
 
 # -------------------------
 
@@ -111,3 +111,5 @@ EOF
     like( $result, qr/\s*node\s*\[\s*label\s*=\s*"\\N"\s*\];\s*/ );
     like( $result, qr/.+label=London,/ );
 }
+
+done_testing;
