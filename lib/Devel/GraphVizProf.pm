@@ -52,10 +52,10 @@ sub DB {
   $DB::cdone = $u+$s+$cu+$cs;
   $DB::done = time;
 
-  # Now save the _< array for later reference.  If we don't do this here, 
+  # Now save the _< array for later reference.  If we don't do this here,
   # evals which do not define subroutines will disappear.
   no strict 'refs';
-  $DB::listings{$filename} = \@{"main::_<$filename"} if 
+  $DB::listings{$filename} = \@{"main::_<$filename"} if
     @{"main::_<$filename"};
   use strict 'refs';
 
@@ -149,7 +149,7 @@ END {
 	    $ratio = $fromtime / $maxtime;
 	    my $fromname = getname($file, $j);
 	    $g->add_node("$file/$fromname", label => $fromname, color => "0,1,$ratio") unless $seenlabel{"$file/$fromname"}++;
-	    my $ratio = $calls / $maxcalls; 
+	    my $ratio = $calls / $maxcalls;
 	    my $w = 100 * (1 - $ratio);
 	    $g->add_edge("$file/$fromname" => "$file/$name", color => "0,1,$ratio", w => $w, len => 2);
 	  }
@@ -157,7 +157,7 @@ END {
       }
     } else {
 #      print "# The code for $file is not in the symbol table.";
-    } 
+    }
   }
 
   print $g->_as_debug;
@@ -176,7 +176,7 @@ sub getname {
   return $line;
 }
 
-{ 
+{
 my $labelcount;
 my %label;
 sub getlabel {
@@ -243,7 +243,7 @@ so to profile F<test.pl>, use the command:
 
 	perl5 -d:GraphVizProf test.pl
 
-Once the script is done, the statistics in F<smallprof.out> can be sorted to 
+Once the script is done, the statistics in F<smallprof.out> can be sorted to
 show which lines took the most time.  The output can be sorted to find which
 lines take the longest, either with the sort command:
 
@@ -252,7 +252,7 @@ lines take the longest, either with the sort command:
 or a perl script:
 
 	open(PROF,"smallprof.out");
-	@sorted = sort {(split(/\s+/,$b))[2] <=> 
+	@sorted = sort {(split(/\s+/,$b))[2] <=>
                         (split(/\s+/,$a))[2]} <PROF>;
         close PROF;
 	print join('',@sorted);
@@ -261,7 +261,7 @@ or a perl script:
 
 =over 4
 
-=item * 
+=item *
 
 The "wall time" readings come from Time::HiRes and are reasonably useful, at
 least on my system.  The cpu times come from the 'times' built-in and the
@@ -274,7 +274,7 @@ GraphVizProf does attempt to make up for its shortcomings by subtracting a small
 amount from each timing (null time compensation).  This should help somewhat
 with the accuracy.
 
-=item * 
+=item *
 
 GraphVizProf depends on the Time::HiRes package to do its timings.  It claims to
 require version 1.20, but may work with earlier versions, depending on your
@@ -292,14 +292,14 @@ gets profiled.
 =item *
 
 If you do not wish to see lines which were never called, set the variable
-C<$DB::drop_zeros = 1>.  With C<drop_zeros> set, GraphVizProf can be used for 
+C<$DB::drop_zeros = 1>.  With C<drop_zeros> set, GraphVizProf can be used for
 basic coverage analysis.
 
 =item *
 
 To turn off profiling for a time, insert a C<$DB::profile = 0> into your code
 (profiling may be turned back on with C<$DB::profile = 1>).  All of the time
-between profiling being turned off and back on again will be lumped together 
+between profiling being turned off and back on again will be lumped together
 and reported on the C<$DB::profile = 0> line.  This can be used to summarize a
 subroutine call or a chunk of code.
 
@@ -312,7 +312,7 @@ example, to see only the code in packages C<main> and C<Test1>, do this:
 
 =item *
 
-These variables can be put in a file called F<.smallprof> in the current 
+These variables can be put in a file called F<.smallprof> in the current
 directory.  For example, a F<.smallprof> containing
 
 	$DB::drop_zeros = 1;
@@ -338,32 +338,32 @@ and should install fine via the CPAN module.
 =head1 BUGS
 
 Subroutine calls are currently not under the control of %DB::packages.  This
-should not be a great inconvenience in general.  
+should not be a great inconvenience in general.
 
-The handling of evals is bad news.  This is due to Perl's handling of evals 
-under the B<-d> flag.  For certain evals, caller() returns '(eval n)' for the 
+The handling of evals is bad news.  This is due to Perl's handling of evals
+under the B<-d> flag.  For certain evals, caller() returns '(eval n)' for the
 filename and for others it doesn't.  For some of those which it does, the array
 C<@{'_E<lt>filename'}> contains the code of the eval.  For others it doesn't.
-Sometime, when I've an extra tuit or two, I'll figure out why and how I can 
+Sometime, when I've an extra tuit or two, I'll figure out why and how I can
 compensate for this.
 
 Comments, advice and questions are welcome.  If you see
 inefficent stuff in this module and have a better way, please let me know.
 
 =head1 AUTHOR
- 
+
 Ted Ashton E<lt>ashted@southern.eduE<gt>
- 
+
 GraphVizProf was developed from code originally posted to usenet by Philippe
 Verdret E<lt>philippe.verdret@sonovision-itep.frE<gt>.  Special thanks to
 Geoffrey Broadwell E<lt>habusan2@sprynet.comE<gt> for his assistance on the
-Win32 platform and to Philippe for his patient assistance in testing and 
+Win32 platform and to Philippe for his patient assistance in testing and
 debugging.
- 
+
 Copyright (c) 1997 Ted Ashton
- 
-This module is free software and can be redistributed and/or modified under the
-same terms as Perl itself.
+
+This module is free software; you can redistribute it or modify it under the Perl License,
+a copy of which is available at L<http://dev.perl.org/licenses/>.
 
 =head1 SEE ALSO
 

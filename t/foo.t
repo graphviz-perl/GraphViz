@@ -3,8 +3,19 @@
 use strict;
 use warnings;
 use lib '../lib', 'lib';
+
+use File::Which 'which';
+
 use GraphViz;
+
 use Test::More tests => 30;
+
+# -------------------------
+
+if (! defined which('dot') )
+{
+	bail_out("Cannot find 'dot'. Please install Graphviz from http://www.graphviz.org/");
+}
 
 # make a nice simple graph and check how output is handled.
 my $g = GraphViz->new();
@@ -94,7 +105,7 @@ EOF
 
 	my($result) = join(' ', @result);
 
-    like( $result, qr/digraph test {/ );
+    like( $result, qr/digraph test \{/ );
     like( $result, qr/\s*graph\s*\[bb=.*/ );
     like( $result, qr/.+ratio=fill/ );
     like( $result, qr/\s*node\s*\[\s*label\s*=\s*"\\N"\s*\];\s*/ );

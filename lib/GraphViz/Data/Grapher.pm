@@ -163,8 +163,8 @@ Leon Brocard E<lt>F<acme@astray.com>E<gt>
 
 Copyright (C) 2000-1, Leon Brocard
 
-This module is free software; you can redistribute it or modify it
-under the same terms as Perl itself.
+This module is free software; you can redistribute it or modify it under the Perl License,
+a copy of which is available at L<http://dev.perl.org/licenses/>.
 
 =cut
 

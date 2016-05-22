@@ -1382,6 +1382,10 @@ GraphViz is deprecated in favour of L<GraphViz2>.
 
 The file Changes was converted into Changelog.ini by L<Module::Metadata::Changes>.
 
+=head1 Repository
+
+L<https://github.com/ronsavage/GraphViz>
+
 =head1 AUTHOR
 
 Leon Brocard: E<lt>F<acme@astray.com>E<gt>.
@@ -1394,8 +1398,8 @@ Copyright (C) 2000-4, Leon Brocard
 
 =head1 LICENSE
 
-This module is free software; you can redistribute it or modify it
-under the same terms as Perl itself.
+This module is free software; you can redistribute it or modify it under the Perl License,
+a copy of which is available at L<http://dev.perl.org/licenses/>.
 
 =cut
 

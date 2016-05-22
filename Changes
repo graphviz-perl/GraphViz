@@ -1,5 +1,15 @@
 Revision history for Perl module GraphViz.
 
+2.22  2016-05-22T09:21:00
+	- Escape a '{' in a regexp in t/foo.t. See RT#114551. Thanx to Slaven Rezic.
+	- See http://savage.net.au/Ron/html/My.Workflow.for.Building.Distros.html for notes on the
+		modernization of the repo.
+		This includes updating Makefile.PL and removing Build.PL, MANIFEST and *META.*.
+	- Bail out cleanly if 'dot' is not installed. See RT#105575. Thanx Karen Etheridge.
+	- Update docs to point to a copy of the Perl licence.
+	- Update docs in GraphViz.pm to point to the github repo.
+	- Move t/pod.t into xt/author/.
+
 2.21  2016-01-23T10:30:00
 	- Fix a typo in a comment, as provided by Gregor Herrmann in RT#111385.
 

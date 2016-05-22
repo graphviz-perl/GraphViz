@@ -2,8 +2,19 @@
 use strict;
 use warnings;
 use lib '../lib', 'lib';
+
+use File::Which 'which';
+
 use GraphViz::Data::Grapher;
+
 use Test::More tests => 1;
+
+# ------------------------
+
+if (! defined which('dot') )
+{
+	bail_out("Cannot find 'dot'. Please install Graphviz from http://www.graphviz.org/");
+}
 
 my @lines = <DATA>;
 
