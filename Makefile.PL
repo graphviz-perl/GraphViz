@@ -60,6 +60,7 @@ my(%params) =
 		'lib'				=> 0,
 		'LWP::Simple'		=> 6.00,
 		'Parse::RecDescent'	=> 1.965001,
+		'perl'				=> 5.006,
 		'Pod::Usage'		=> 1.16,
 		'strict'			=> 0,
 		'Time::HiRes'		=> 1.51,
