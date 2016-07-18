@@ -1,14 +1,14 @@
 #!/usr/bin/perl
 
+use lib '../lib', 'lib';
 use strict;
 use warnings;
-use lib '../lib', 'lib';
 
 use File::Which 'which';
 
 use GraphViz;
 
-use Test2::Bundle::Extended;
+use Test::More;
 
 # -------------------------
 

@@ -1,5 +1,9 @@
 Revision history for Perl module GraphViz.
 
+2.22  2016-07-19T09:24:00
+	- Revert change so we use Test::More instead of Test2::Bundle::Extended.
+		See RT#115236. Thanx to ribasushi for this report, and my apologies for not acting sooner.
+
 2.21  2016-05-22T09:21:00
 	- Escape a '{' in a regexp in t/foo.t. See RT#114551. Thanx to Slaven Rezic.
 	- Fix a typo in a comment, as provided by Gregor Herrmann in RT#111385.

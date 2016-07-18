@@ -71,9 +71,8 @@ my(%params) =
 	},
 	TEST_REQUIRES =>
 	{
-		'Test::More'				=> 1.302019, # Just for pod.t :-(.
-		'Test::Pod'					=> 1.48,
-		'Test2::Bundle::Extended'	=> '0.000030',
+		'Test::More'	=> 1.302019,
+		'Test::Pod'		=> 1.48,
 	},
 	VERSION_FROM => 'lib/GraphViz.pm',
 );

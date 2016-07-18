@@ -1,41 +1,44 @@
-#!/usr/bin/perl -w
+#!/usr/bin/perl
+
+use lib '../lib', 'lib';
 use strict;
 use warnings;
-use lib '../lib', 'lib';
 
 use File::Which 'which';
 
 use GraphViz::Data::Grapher;
 
-use Test2::Bundle::Extended;
+use Test::More;
 
-# ------------------------
+# --------------------------
 
 if (! defined which('dot') )
 {
 	bail_out("Cannot find 'dot'. Please install Graphviz from http://www.graphviz.org/");
 }
 
-my @lines = <DATA>;
+my(@lines) = <DATA>;
 
-foreach my $lines ( split '-- test --', ( join "", @lines ) ) {
-    my ( $test, $expect ) = split '-- expect --', $lines;
-    next unless $test;
-    $expect =~ s|^\n||mg;
-    $expect =~ s|\n$||mg;
+for my $lines ( split '-- test --', ( join "", @lines ) )
+{
+	my ( $test, $expect ) = split '-- expect --', $lines;
 
-    $test =~ s|^\n||mg;
-    $test =~ s|\n$||mg;
+	next unless $test;
 
-    my $g;
-    eval $test;
+	$expect	=~ s|^\n||mg;
+	$expect	=~ s|\n$||mg;
+	$test	=~ s|^\n||mg;
+	$test	=~ s|\n$||mg;
 
-    my $result = $g->_as_debug;
+    my($g);
 
-    $result =~ s|^\n||mg;
-    $result =~ s|\n$||mg;
+	eval $test;
 
-    is( $result, $expect, "got expected graph" );
+	my($result)	= $g->_as_debug;
+	$result		=~ s|^\n||mg;
+	$result		=~ s|\n$||mg;
+
+	is($result, $expect, 'Got expected graph');
 }
 
 done_testing;
