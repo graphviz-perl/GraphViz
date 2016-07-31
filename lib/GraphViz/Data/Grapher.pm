@@ -28,7 +28,7 @@ structures can grow quite large and it can be hard to understand the
 quite how the structure fits together.
 
 Data::Dumper can help by representing the structure as a text
-heirarchy, but GraphViz::Data::Grapher goes a step further and
+hierarchy, but GraphViz::Data::Grapher goes a step further and
 visualises the structure by drawing a graph which represents the data
 structure.
 
