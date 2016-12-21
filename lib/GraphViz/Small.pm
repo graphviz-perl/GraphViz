@@ -6,7 +6,7 @@ use GraphViz;
 
 our @ISA = qw(GraphViz);
 
-our $VERSION = '2.22';
+our $VERSION = '2.23';
 
 =head1 NAME
 

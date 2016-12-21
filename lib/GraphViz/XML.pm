@@ -7,7 +7,7 @@ use lib '..';
 use GraphViz;
 use XML::Twig;
 
-our $VERSION = '2.22';
+our $VERSION = '2.23';
 
 =head1 NAME
 
@@ -48,7 +48,7 @@ sub new {
     my $class = ref($proto) || $proto;
     my $xml   = shift;
 
-    my $t = XML::Twig->new();
+    my $t = XML::Twig->new(no_xxe => 1);
     $t->parse($xml);
     my $graph = GraphViz->new();
     _init( $graph, $t->root );
