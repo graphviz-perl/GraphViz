@@ -66,7 +66,7 @@ my(%params) =
 		'Time::HiRes'		=> 1.51,
 		'vars'				=> 0,
 		'warnings'			=> 0,
-		'XML::Twig'			=> 3.38,
+		'XML::Twig'			=> 3.52,
 		'XML::XPath'		=> 1.13,
 	},
 	TEST_REQUIRES =>

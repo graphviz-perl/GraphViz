@@ -9,7 +9,7 @@ use Carp;
 use Config;
 use IPC::Run qw(run binary);
 
-our $VERSION = '2.22';
+our $VERSION = '2.23';
 
 =pod
 
@@ -1366,6 +1366,13 @@ The keywords are: node, edge, graph, digraph, subgraph and strict. Compass point
 
 See L<keywords|http://www.graphviz.org/content/dot-language> in the discussion of the syntax of DOT
 for details.
+
+=head2 XXE
+
+Due to security risks with XXE, Graphviz does not support XML that contains XXE
+and prevents external entities being parsed by using the no_xxe option in XML::Twig.
+
+See L<https://metacpan.org/pod/release/MIROD/XML-Twig-3.52/Twig.pm#no_xxe>
 
 =head1 NOTES
 
