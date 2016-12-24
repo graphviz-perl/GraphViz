@@ -1367,10 +1367,12 @@ The keywords are: node, edge, graph, digraph, subgraph and strict. Compass point
 See L<keywords|http://www.graphviz.org/content/dot-language> in the discussion of the syntax of DOT
 for details.
 
-=head2 XXE
+=head2 How do you handle XXE within XML?
 
-Due to security risks with XXE, Graphviz does not support XML that contains XXE
-and prevents external entities being parsed by using the no_xxe option in XML::Twig.
+Due to security risks with XXE in XML, Graphviz does not support XML that contains XXE. Thus it
+automatically prevents external entities being parsed by using the no_xxe option in L<XML::Twig>
+when calling XML::Twig -> new(). And for this reason also the pre-reqs in Makefile.PL specify
+XML::Twig V 3.52.
 
 See L<https://metacpan.org/pod/release/MIROD/XML-Twig-3.52/Twig.pm#no_xxe>
 

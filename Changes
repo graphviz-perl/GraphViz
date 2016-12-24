@@ -1,7 +1,7 @@
 Revision history for Perl module GraphViz.
 
 2.23  2016-12-21T08:00:00
-    - Add no_xxe to XML::Twig instansiation. See RT#118972
+	- Add no_xxe to XML::Twig instansiation. See RT#118972
 
 2.22  2016-07-19T09:24:00
 	- Revert change so we use Test::More instead of Test2::Bundle::Extended.
