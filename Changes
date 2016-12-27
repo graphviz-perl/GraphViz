@@ -1,5 +1,10 @@
 Revision history for Perl module GraphViz.
 
+2.24  2016-12-27T10:58:00
+	- Test with Test::More V 1.001002 rather than V 1.302019, and all tests still pass.
+		See RT#115236. Thanx to Kent Fredric for again (sorry!) prompting me over this.
+		Lowering the version of Test::More in Makefile.PL is the only change in this version.
+
 2.23  2016-12-21T08:00:00
 	- Add no_xxe to XML::Twig instantiation. See RT#118972. Many thanx to Lisa Hare for a
 		very well-crafted set of patches provided via github.
