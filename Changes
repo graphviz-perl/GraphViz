@@ -78,6 +78,9 @@ Revision history for Perl module GraphViz.
 	- No code changes.
 	- For pre-reqs such as strict, warnings, etc, which ship with Perl, set the version # to 0.
 		Reported as RT#80663 by Father Chrysostomos for Tree::DAG_Node.
+	- Remove 'perl' as a pre-req from Makefile.PL. It causes pain for my build script
+		https://savage.net.au/misc/build.module.sh.
+
 
 2.11  2012-09-18T08:22:00
 	- Add VDX as an output format.
