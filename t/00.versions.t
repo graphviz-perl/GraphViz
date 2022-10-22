@@ -19,7 +19,6 @@ use IPC::Run;
 use lib;
 use LWP::Simple;
 use Parse::RecDescent;
-use perl;
 use Pod::Usage;
 use strict;
 use Time::HiRes;
@@ -44,7 +43,6 @@ my(@modules) = qw
 	lib
 	LWP::Simple
 	Parse::RecDescent
-	perl
 	Pod::Usage
 	strict
 	Time::HiRes
