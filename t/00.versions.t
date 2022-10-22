@@ -22,6 +22,7 @@ use Parse::RecDescent;
 use perl;
 use Pod::Usage;
 use strict;
+use Tree;
 use Time::HiRes;
 use vars;
 use warnings;

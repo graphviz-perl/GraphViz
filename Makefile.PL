@@ -63,7 +63,6 @@ my(%params) =
 		'perl'				=> 5.006,
 		'Pod::Usage'		=> 1.16,
 		'strict'			=> 0,
-		'Tree'				=> 1.15,
 		'Time::HiRes'		=> 1.51,
 		'vars'				=> 0,
 		'warnings'			=> 0,
