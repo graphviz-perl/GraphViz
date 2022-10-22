@@ -5,7 +5,7 @@ use warnings;
 
 # I tried 'require'-ing modules but that did not work.
 
-use Tree; # For the version #.
+use GraphViz; # For the version #.
 
 use Test::More;
 
@@ -34,18 +34,28 @@ pass('All external modules loaded');
 
 my(@modules) = qw
 /
-	base
-	constant
-	Data::Dumper
-	Exporter
+	Carp
+	Config
+	File::Which
+	Getopt::Long
+	IO::Dir
+	IO::File
+	IPC::Run
 	lib
-	overload
-	Scalar::Util
+	LWP::Simple
+	Parse::RecDescent
+	perl
+	Pod::Usage
 	strict
+	Tree
+	Time::HiRes
+	vars
 	warnings
+	XML::Twig
+	XML::XPath
 /;
 
-diag "Testing Tree V $Tree::VERSION";
+diag "Testing GraphViz V $GraphViz::VERSION";
 
 for my $module (@modules)
 {

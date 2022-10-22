@@ -7,7 +7,6 @@ Revision history for Perl module GraphViz.
 	- The point is that I deleted GraphViz from CPAN, but some people still want to use it.
 		So, to everybody concerned, my apologies.
 	- Add t/00.versions.t and t/00.versions.tx to report all module versions during testing.
-		Since the former uses Tree, add it to Makefile.PL's PREREQ_PM list.
 
 2.24  2016-12-27T10:58:00
 	- Test with Test::More V 1.001002 rather than V 1.302019, and all tests still pass.
